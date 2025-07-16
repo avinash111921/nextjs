@@ -29,7 +29,6 @@ export async function ConnectDB() {
     }
     try {
         cached.conn =await cached.promise;
-        return cached.conn;
     } catch (error) {
         cached.promise = null;  // reset the promise if connection fails
         throw error;  // rethrow the error for handling
